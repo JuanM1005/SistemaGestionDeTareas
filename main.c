@@ -2,7 +2,7 @@
 #include "FUNCIONES.H"
 
 /*Aguirre Mares Juan Antonio -
-    Programación Estructurada*/
+    ProgramaciÃ³n Estructurada*/
 
 int main() {
     struct tarea Tareas[MAX_TAREAS];
@@ -35,7 +35,7 @@ int main() {
                 break;
             case 5:
                 system("cls");
-                buscarTareaPorTitulo(Tareas, numTareas, 0);
+                int tareaEncontrada = buscarTareaPorTitulo(Tareas, numTareas, 0);
                 system("pause");
                 break;
             case 6:
