@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1700963953 source:c:\users\thete\onedrive - universidad de guadalajara\desktop\proyectos programación\proyecto sistema gestion de tareas\main.c
+	<stdio.h>
+	"FUNCIONES.H"
+
+1700964037 c:\users\thete\onedrive - universidad de guadalajara\desktop\proyectos programación\proyecto sistema gestion de tareas\funciones.h
+	<string.h>
+	<time.h>
+	<stdlib.h>
+
