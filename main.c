@@ -39,7 +39,6 @@ int main() {
                 system("pause");
                 break;
             case 6:
-                system("cls");
                 imprime_salida();
                 break;
             default:

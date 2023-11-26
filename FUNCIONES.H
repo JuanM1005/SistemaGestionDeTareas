@@ -24,6 +24,7 @@ void menu_principal() {
     printf("\t----------------------------------------\n");
 
     printf("Seleccione su opci%cn: ", 162);
+    fflush(stdin);
 }
 
 
@@ -107,9 +108,7 @@ void tareaCompletada(struct tarea *TasksCompleted, int conTasks) {
     // No se incluye "return 1;" al final de la función void.
 }
 
-int buscarTareaPorTitulo(struct tarea *titleTasks, int conTasks, int indice) {
-    while (getchar() != '\n');
-
+int buscarTareaPorTitulo(struct tarea *titleTasks, int conTasks, int indice) {// Limpiar el búfer residual
     // Verificar si se alcanzó el final de la lista
     if (indice >= conTasks) {
         printf("La tarea no fue encontrada.\n");
@@ -119,13 +118,14 @@ int buscarTareaPorTitulo(struct tarea *titleTasks, int conTasks, int indice) {
     // Solicitar al usuario que ingrese el título de la tarea
     printf("Ingrese el titulo de la tarea que desea buscar: ");
     char tituloBusqueda[100];
+    while (getchar() != '\n');
     fgets(tituloBusqueda, sizeof(tituloBusqueda), stdin);
     tituloBusqueda[strcspn(tituloBusqueda, "\n")] = '\0';  // Elimina el carácter de nueva línea.
 
     // Comparar el título actual con el título de búsqueda
     if (strcmp(titleTasks[indice].Titulo, tituloBusqueda) == 0) {
         // Tarea encontrada, mostrar información
-        printf("\n\033[1mTarea encontrada:\033[0m\n");
+        printf("\033[1mTarea encontrada:\033[0m\n");
         printf("T%ctulo: %s\n", 161, titleTasks[indice].Titulo);
         printf("Estado: %s\n", (titleTasks[indice].completado == 1) ? "Completada" : "Pendiente");
         return 1;  // Indicar que la tarea fue encontrada
