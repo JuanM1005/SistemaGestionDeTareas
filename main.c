@@ -35,7 +35,7 @@ int main() {
                 break;
             case 5:
                 system("cls");
-                int tareaEncontrada = buscarTareaPorTitulo(Tareas, numTareas, 0);
+                buscarTareaPorTitulo(Tareas, numTareas, 0);
                 system("pause");
                 break;
             case 6:
